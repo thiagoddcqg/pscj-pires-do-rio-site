@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Paróquia Sagrado Coração de Jesus - Pires do Rio-GO</title>
+  <style>
+    /* ----------------------------- */
+    /* ESTILOS GERAIS */
+    /* ----------------------------- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #800000;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin-bottom: 10px;
+    }
+
+    nav {
+      background-color: #660000;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: white;
+      padding: 15px 20px;
+      text-decoration: none;
+      display: inline-block;
+      transition: background 0.3s;
+    }
+
+    nav a:hover {
+      background-color: #a00000;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      color: #800000;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 5px;
+    }
+
+    .clero-lista, .secretarias {
+      padding-left: 20px;
+    }
+
+    footer {
+      background-color: #800000;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 30px;
+    }
+
+    /* ----------------------------- */
+    /* FORMULÁRIO DE CONTATO */
+    /* ----------------------------- */
+    form {
+      max-width: 600px;
+      margin-top: 20px;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      background-color: #800000;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #a00000;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+      }
+
+      nav a {
+        border-top: 1px solid #a00000;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- CABEÇALHO -->
+  <header>
+    <h1>Paróquia Sagrado Coração de Jesus</h1>
+    <p>Pires do Rio - GO | Diocese de Ipameri</p>
+  </header>
+
+  <!-- NAVEGAÇÃO -->
+  <nav>
+    <a href="#inicio">Início</a>
+    <a href="#sobre">Sobre</a>
+    <a href="#clero">Clero</a>
+    <a href="#contato">Contato</a>
+  </nav>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <main>
+
+    <!-- INÍCIO -->
+    <section id="inicio">
+      <h2>Bem-vindo!</h2>
+      <p>Seja bem-vindo ao site oficial da Paróquia Sagrado Coração de Jesus de Pires do Rio-GO, pertencente à Diocese de Ipameri.</p>
+    </section>
+
+    <!-- SOBRE A PARÓQUIA -->
+    <section id="sobre">
+      <h2>Sobre a Paróquia</h2>
+      <p><strong>Fundação:</strong> 20 de outubro de 2018</p>
+      <p><strong>Endereço:</strong> Rua Deodoro Veiga, 35 – Centro, CEP 75200 – Pires do Rio-GO</p>
+      <p><strong>Telefone:</strong> (64) 3461-1616</p>
+      <p><strong>E-mail:</strong> pscj2010@gmail.com</p>
+    </section>
+
+    <!-- CLERO -->
+    <section id="clero">
+      <h2>Clero da Paróquia</h2>
+      <p><strong>Pároco:</strong></p>
+      <ul class="clero-lista">
+        <li>Frei Renildo Cirineu, OFM</li>
+      </ul>
+
+      <p><strong>Demais frades:</strong></p>
+      <ul class="clero-lista">
+        <li>Frei Luiz Antônio Vieira, OFM</li>
+        <li>Frei Fernando da Costa Morais, OFM</li>
+      </ul>
+
+      <p><strong>Secretárias:</strong></p>
+      <ul class="secretarias">
+        <li>Maria Teresa Soares Lopes</li>
+        <li>Edna Ferreira</li>
+      </ul>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato">
+      <h2>Entre em Contato</h2>
+      <form onsubmit="enviarMensagem(event)">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" required>
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" required>
+
+        <label for="mensagem">Mensagem:</label>
+        <textarea id="mensagem" rows="5" required></textarea>
+
+        <button type="submit">Enviar</button>
+      </form>
+      <p id="status-envio" style="margin-top:10px; color:green;"></p>
+    </section>
+
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer>
+    &copy; 2025 Paróquia Sagrado Coração de Jesus | Desenvolvido com fé 💒
+  </footer>
+
+  <!-- SCRIPT -->
+  <script>
+    // Função para simular envio de formulário
+    function enviarMensagem(event) {
+      event.preventDefault();
+      const nome = document.getElementById('nome').value;
+      document.getElementById('status-envio').textContent = `Obrigado, ${nome}! Sua mensagem foi enviada com sucesso.`;
+      event.target.reset();
+    }
+  </script>
+</body>
+</html>
