@@ -10,10 +10,10 @@ Este projeto consiste em um site estático desenvolvido para a **Paróquia Sagra
 
 ## 📋 Funcionalidades
 
-- **Início**: Apresentação da paróquia e acolhida ao visitante  
-- **Sobre**: Endereço, contato e informações institucionais  
-- **Clero**: Lista dos frades e secretárias atuantes na paróquia  
-- **Contato**: Formulário de mensagem simples, com resposta simulada via JavaScript
+- **Início**: apresentação da paróquia e acolhida ao visitante.
+- **Sobre**: endereço, contato e informações institucionais.
+- **Clero**: lista dos frades e secretárias atuantes na paróquia.
+- **Contato**: formulário de mensagem simples, com resposta simulada via JavaScript.
 
 ## 📂 Estrutura de Pastas
 
